@@ -13,6 +13,7 @@ var firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   username = localStorage.getItem("user_name");
+  room_name = localStorage.getItem("room_name")
   document.getElementById("username").innerHTML = "Welcome " + username;
 
 
