@@ -27,7 +27,8 @@ function add_room(){
 
   localStorage.setItem("room_name", room_name);
 
- 
+  row = "<div class='room_name' id="+Room_names+"onlick='redirectToRoomName(this.id)'>#"+Room_names+"</div><hr>";
+  document.getElementById("output").innerHTML = row;
 }
 
   function getData() {firebase.database().ref("/").on('value',
@@ -40,3 +41,15 @@ document.getElementById("output").innerHTML = row;
 //End code
 });});}
 getData();
+
+
+function logout(){
+  localStorage.removeItem("user_name");
+  localStorage.removeItem("room_name");
+  window.location = "ind.html";
+
+}
+
+function redirectToRoomName(this.id){
+  this.id = "something";
+}
